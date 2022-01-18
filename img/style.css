@@ -10,3 +10,13 @@ html, body{
     padding: 0px;
 
 }
+
+.wrapper{
+    background-color:dimgray;
+
+    max-width: 50%;
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+
+}
