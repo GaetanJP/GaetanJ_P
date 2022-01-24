@@ -14,17 +14,17 @@ html, body{
 .wrapper{
     background-color:dimgray;
 
-    max-width: 50%;
+    max-width: 100%;
     display: flex;
     flex-direction: row;
-    height: 80%;
+    height: 100%;
 
 }
 
 .left, .right{
     background-color: lightcyan;
     margin: 5px;
-    max-width: 50;
+    max-width: 100;
     flex: 1;
     display: flex;
     flex-direction: column;
