@@ -31,9 +31,10 @@ def tex(text: str) -> str:
     if not isinstance(text, str):
         text = str(text)
 
-    # Convert HTML tags → temporary markers (before any escaping)
-    text = re.sub(r"<strong>(.*?)</strong>", r"%%BOLD%%\1%%ENDBOLD%%",   text, flags=re.DOTALL)
-    text = re.sub(r"<em>(.*?)</em>",         r"%%ITALIC%%\1%%ENDITALIC%%", text, flags=re.DOTALL)
+    # Convert HTML tags → markers that contain NO LaTeX special characters
+    # (must survive the escaping step below unchanged)
+    text = re.sub(r"<strong>(.*?)</strong>", r"ZZBOLDSTARTZ\1ZZBOLENDZ",     text, flags=re.DOTALL)
+    text = re.sub(r"<em>(.*?)</em>",         r"ZZITALICSTARTZ\1ZZITALICENDZ", text, flags=re.DOTALL)
     text = re.sub(r"<[^>]+>", "", text)  # strip any remaining HTML tags
 
     # Escape LaTeX special characters
@@ -54,9 +55,9 @@ def tex(text: str) -> str:
     # Unicode dashes → LaTeX dashes
     text = text.replace("—", "---").replace("–", "--")
 
-    # Restore bold / italic
-    text = text.replace("%%BOLD%%",      r"\textbf{").replace("%%ENDBOLD%%",   "}")
-    text = text.replace("%%ITALIC%%",    r"\textit{").replace("%%ENDITALIC%%", "}")
+    # Restore bold / italic (markers are still intact since they had no special chars)
+    text = text.replace("ZZBOLDSTARTZ",   r"\textbf{").replace("ZZBOLENDZ",    "}")
+    text = text.replace("ZZITALICSTARTZ", r"\textit{").replace("ZZITALICENDZ", "}")
 
     return text
 
@@ -80,8 +81,10 @@ def render_header(data: dict) -> str:
     parts = []
     if phone:    parts.append(phone)
     if email:    parts.append(href(f"mailto:{email}", email))
-    if linkedin: parts.append(href(linkedin["url"], linkedin["value"]))
-    if github:   parts.append(href(github["url"],   github["value"]))
+    if linkedin:
+        linkedin_display = linkedin["url"].replace("https://", "").replace("http://", "").rstrip("/")
+        parts.append(href(linkedin["url"], linkedin_display))
+    if github:   parts.append(href(github["url"], github["value"]))
     if location: parts.append(location)
 
     return rf"""
