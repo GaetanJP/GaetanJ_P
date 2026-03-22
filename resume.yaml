@@ -75,7 +75,7 @@ projects:
       A cross-platform AI wellness tracking app using facial analysis to generate
       personalized health insights. Features a serverless backend, real-time dashboards,
       push notifications, and monetization via RevenueCat.
-    link: "#"
+    link: "https://facescanhealth.com/"
     github: "#"
     tags:
       - React Native
