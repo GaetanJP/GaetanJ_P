@@ -1,0 +1,8 @@
+{
+  "name": "gaetan-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio — edit resume.yaml to update content",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}

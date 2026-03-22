@@ -1,0 +1,127 @@
+name: Gaetan Jean-Pierre
+title: Software Engineer
+location: San Francisco, CA
+email: gaetanjpcan@gmail.com
+phone: "+1 (514) 953-8918"
+bio: >
+  I build performant, user-first software experiences. Currently an Associate Software Engineer at
+  <strong>UKG</strong>, pursuing a CS certification at <strong>Stanford</strong>, and shipping
+  indie apps on the side.
+
+education:
+  - school: Stanford University
+    degree: Certification, Computer Science
+    date: Mar 2026 — Oct 2026
+
+  - school: McGill University
+    degree: B.Sc. Computer Science
+    date: Sep 2020 — Apr 2025
+    gpa: "3.78"
+
+experience:
+  - company: UKG
+    role: Associate Software Engineer
+    location: Montreal, QC
+    date: Mar 2025 — Present
+    current: true
+    bullets:
+      - "Architected a high-performance UI component library for the UKG Schedule Generator using a novel heuristic, reducing engine latency by <strong>30 seconds</strong> for enterprise-scale clients."
+      - "Engineered an AI-driven self-scheduling feature enabling employees to automate shift requests via a single-click interface with intelligent historical preference selection."
+      - "Revitalized the employee search interface with optimized filtering logic, significantly reducing search friction in enterprise-scale workforce management modules."
+      - "Implemented a dynamic CSS recalculation engine resolving cross-device display bugs, ensuring <strong>100% visual integrity</strong> across diverse hardware."
+
+  - company: Onyx Technologies
+    role: Software Engineer
+    location: Montreal, QC
+    date: May 2024 — Feb 2025
+    bullets:
+      - "Architected a Machine Learning pipeline to extract and format enterprise data for model training, exposing predictive insights through a scalable RESTful API."
+      - "Engineered a reusable \"Help & Guidance\" framework with context-specific modals and video tutorials, accelerating user onboarding across all custom UI components."
+      - "Designed a personalized recommendation engine to match users with optimal business units using individual preference profiles."
+      - "Enhanced front-end speed by <strong>66%</strong> by designing and customizing Lightning Web Components (LWC) with ES6+ and data-fetching optimization."
+
+  - company: Clinia
+    role: Software Developer Intern
+    location: Montreal, QC
+    date: Jan 2023 — May 2023
+    bullets:
+      - "Revamped scraping algorithms using C# and ASP.NET, reducing resource consumption by <strong>30%</strong>."
+      - "Developed and maintained multiple ETL pipelines to ensure data workflow stability."
+      - "Improved code quality by writing testable code covering critical edge cases with robust exception handling."
+
+projects:
+  - name: Questly
+    icon: "🎮"
+    role: Lead Developer
+    date: Jan 2026 — Present
+    description: >
+      A gamified daily challenge platform with a suite of interactive logic games.
+      Features a "Playful but Minimal" UI with smooth animations and a synchronized
+      global daily challenge using seeded randomness.
+    link: "#"
+    github: "#"
+    tags:
+      - React Native
+      - TypeScript
+      - Puzzle Engine
+      - Procedural Generation
+
+  - name: FaceScan
+    icon: "🧘"
+    role: Lead Developer
+    date: Nov 2025 — Present
+    description: >
+      A cross-platform AI wellness tracking app using facial analysis to generate
+      personalized health insights. Features a serverless backend, real-time dashboards,
+      push notifications, and monetization via RevenueCat.
+    link: "#"
+    github: "#"
+    tags:
+      - React Native
+      - Expo
+      - TypeScript
+      - Supabase
+      - Gemini API
+      - RevenueCat
+
+skills:
+  - category: Languages
+    items:
+      - JavaScript
+      - TypeScript
+      - Python
+      - Java
+      - C#
+      - HTML / CSS
+
+  - category: Frameworks & Libraries
+    items:
+      - React
+      - React Native
+      - AngularJS
+      - ASP.NET
+      - Expo
+
+  - category: Tools & Platforms
+    items:
+      - Git
+      - Supabase
+      - Salesforce LWC
+      - RESTful APIs
+      - RevenueCat
+
+socials:
+  - label: GitHub
+    value: github.com/GaetanJP
+    url: https://github.com/GaetanJP
+    type: github
+
+  - label: LinkedIn
+    value: Gaetan Jean-Pierre
+    url: https://www.linkedin.com/in/gaetan-jean-pierre-823a6221b/
+    type: linkedin
+
+  - label: Email
+    value: gaetanjpcan@gmail.com
+    url: mailto:gaetanjpcan@gmail.com
+    type: email
