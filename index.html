@@ -1,44 +1,327 @@
 <!DOCTYPE html>
-<html>
-   
-   
-    <head>
-        <title>Gaetan Jean-Pierre</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <div class="wrapper">
-        <div class = "left">
-        <img class="profilePicture" src="img/ProfilePicture.jpg" width="200"/>
-    <h1>
-        Gaetan Jean-Pierre
-    </h1>
-        </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaetan Jean-Pierre — Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <div class="right">
-    <p>Hi! I'm Gaetan and here is my portfolio! It is still in the works, but I hope to add new things in the near future.
-        
-        Thank you for visiting my website!</p>
-    
-    <ul class="socials">
-        <li>
-         <a href="https://github.com/GaetanJP">GitHub</a>
-        </li>
-        <li><a href="https://www.linkedin.com/in/gaetan-jean-pierre-823a6221b/">LinkedIn</a></li>
-    </ul>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <span class="nav-logo">GJP</span>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><button class="btn-connect" id="open-modal-btn">Connect</button></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        </div>
-    <main>
-        <section class="container">
-            <!--title-->
-            <div class="title">
-                <h2>My Projects</h2>
-                <div class="Underline">
+    </nav>
 
+    <!-- HERO -->
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hi, I'm</p>
+                <h1 class="hero-name">Gaetan<br>Jean-Pierre</h1>
+                <p class="hero-title">Software Engineer</p>
+                <p class="hero-location">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    San Francisco, CA
+                </p>
+                <p class="hero-bio">
+                    I build performant, user-first software experiences. Currently an Associate Software Engineer at 
+                    <strong>UKG</strong>, pursuing a CS certification at <strong>Stanford</strong>, and shipping 
+                    indie apps on the side.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn-primary">View Projects</a>
+                    <button class="btn-secondary" id="open-modal-btn-hero">Connect with me</button>
                 </div>
             </div>
-        </section>
-    </main>
-    
-    </body>
+            <div class="hero-image">
+                <div class="image-ring">
+                    <img src="img/ProfilePicture.jpg" alt="Gaetan Jean-Pierre" class="profile-pic">
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Mar 2025 — Present</span>
+                            <span class="timeline-badge current">Current</span>
+                        </div>
+                        <h3 class="timeline-role">Associate Software Engineer</h3>
+                        <p class="timeline-company">UKG <span>· Montreal, QC</span></p>
+                        <ul class="timeline-bullets">
+                            <li>Architected a high-performance UI component library for the UKG Schedule Generator using a novel heuristic, reducing engine latency by <strong>30 seconds</strong> for enterprise-scale clients.</li>
+                            <li>Engineered an AI-driven self-scheduling feature enabling employees to automate shift requests via a single-click interface with intelligent historical preference selection.</li>
+                            <li>Revitalized the employee search interface with optimized filtering logic, significantly reducing search friction in enterprise-scale workforce management modules.</li>
+                            <li>Implemented a dynamic CSS recalculation engine resolving cross-device display bugs, ensuring <strong>100% visual integrity</strong> across diverse hardware.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">May 2024 — Feb 2025</span>
+                        </div>
+                        <h3 class="timeline-role">Software Engineer</h3>
+                        <p class="timeline-company">Onyx Technologies <span>· Montreal, QC</span></p>
+                        <ul class="timeline-bullets">
+                            <li>Architected a Machine Learning pipeline to extract and format enterprise data for model training, exposing predictive insights through a scalable RESTful API.</li>
+                            <li>Engineered a reusable "Help & Guidance" framework with context-specific modals and video tutorials, accelerating user onboarding across all custom UI components.</li>
+                            <li>Designed a personalized recommendation engine to match users with optimal business units using individual preference profiles.</li>
+                            <li>Enhanced front-end speed by <strong>66%</strong> by designing and customizing Lightning Web Components (LWC) with ES6+ and data-fetching optimization.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Jan 2023 — May 2023</span>
+                        </div>
+                        <h3 class="timeline-role">Software Developer Intern</h3>
+                        <p class="timeline-company">Clinia <span>· Montreal, QC</span></p>
+                        <ul class="timeline-bullets">
+                            <li>Revamped scraping algorithms using C# and ASP.NET, reducing resource consumption by <strong>30%</strong>.</li>
+                            <li>Developed and maintained multiple ETL pipelines to ensure data workflow stability.</li>
+                            <li>Improved code quality by writing testable code covering critical edge cases with robust exception handling.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section section-alt" id="education">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Education</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="education-grid">
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    </div>
+                    <div class="edu-info">
+                        <h3>Stanford University</h3>
+                        <p class="edu-degree">Certification, Computer Science</p>
+                        <p class="edu-date">Mar 2026 — Oct 2026</p>
+                    </div>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    </div>
+                    <div class="edu-info">
+                        <h3>McGill University</h3>
+                        <p class="edu-degree">B.Sc. Computer Science</p>
+                        <p class="edu-date">Sep 2020 — Apr 2025 · GPA 3.78</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🎮</div>
+                        <div class="project-links">
+                            <!-- Replace href="#" with your actual project link -->
+                            <a href="#" class="project-link-btn" aria-label="View project">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                            <!-- Replace href="#" with your GitHub repo link -->
+                            <a href="#" class="project-link-btn" aria-label="View on GitHub">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Questly</h3>
+                    <p class="project-date">Jan 2026 — Present · Lead Developer</p>
+                    <p class="project-desc">A gamified daily challenge platform with a suite of interactive logic games. Features a "Playful but Minimal" UI with smooth animations and a synchronized global daily challenge using seeded randomness.</p>
+                    <div class="project-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Puzzle Engine</span>
+                        <span class="tag">Procedural Generation</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🧘</div>
+                        <div class="project-links">
+                            <!-- Replace href="#" with your actual project link -->
+                            <a href="#" class="project-link-btn" aria-label="View project">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                            <!-- Replace href="#" with your GitHub repo link -->
+                            <a href="#" class="project-link-btn" aria-label="View on GitHub">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">FaceScan</h3>
+                    <p class="project-date">Nov 2025 — Present · Lead Developer</p>
+                    <p class="project-desc">A cross-platform AI wellness tracking app using facial analysis to generate personalized health insights. Features a serverless backend, real-time dashboards, push notifications, and monetization via RevenueCat.</p>
+                    <div class="project-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">Expo</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Supabase</span>
+                        <span class="tag">Gemini API</span>
+                        <span class="tag">RevenueCat</span>
+                    </div>
+                </div>
+
+                <!-- ADD MORE PROJECTS HERE — copy a project-card block above -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section-alt" id="skills">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Skills</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h4 class="skill-group-title">Languages</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">HTML / CSS</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4 class="skill-group-title">Frameworks & Libraries</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">AngularJS</span>
+                        <span class="skill-tag">ASP.NET</span>
+                        <span class="skill-tag">Expo</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4 class="skill-group-title">Tools & Platforms</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Supabase</span>
+                        <span class="skill-tag">Salesforce LWC</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">RevenueCat</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Designed & built by <strong>Gaetan Jean-Pierre</strong> · 2026</p>
+        <button class="footer-connect" id="open-modal-btn-footer">Get in touch →</button>
+    </footer>
+
+    <!-- SOCIAL MODAL -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modal-close" aria-label="Close">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <h2 class="modal-title">Let's Connect</h2>
+            <p class="modal-subtitle">Reach out — I'm always open to new opportunities and collaborations.</p>
+            <div class="modal-links">
+
+                <a href="https://github.com/GaetanJP" target="_blank" rel="noopener" class="modal-link">
+                    <div class="modal-link-icon github-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </div>
+                    <div class="modal-link-info">
+                        <span class="modal-link-label">GitHub</span>
+                        <span class="modal-link-value">github.com/GaetanJP</span>
+                    </div>
+                    <svg class="modal-link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+
+                <a href="https://www.linkedin.com/in/gaetan-jean-pierre-823a6221b/" target="_blank" rel="noopener" class="modal-link">
+                    <div class="modal-link-icon linkedin-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </div>
+                    <div class="modal-link-info">
+                        <span class="modal-link-label">LinkedIn</span>
+                        <span class="modal-link-value">Gaetan Jean-Pierre</span>
+                    </div>
+                    <svg class="modal-link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+
+                <a href="mailto:gaetanjpcan@gmail.com" class="modal-link">
+                    <div class="modal-link-icon email-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <div class="modal-link-info">
+                        <span class="modal-link-label">Email</span>
+                        <span class="modal-link-value">gaetanjpcan@gmail.com</span>
+                    </div>
+                    <svg class="modal-link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+
+                <!-- ADD MORE LINKS HERE — e.g. Twitter, Portfolio, App Store links -->
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
