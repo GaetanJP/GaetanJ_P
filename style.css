@@ -293,6 +293,30 @@ ul {
     transform: translateY(-2px);
 }
 
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 12px 22px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    font-family: var(--font);
+    color: var(--text-secondary);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color var(--transition), color var(--transition),
+                background var(--transition), transform var(--transition);
+}
+
+.btn-download:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--surface);
+    transform: translateY(-2px);
+}
+
 .hero-image {
     flex-shrink: 0;
 }

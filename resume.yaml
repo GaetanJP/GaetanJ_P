@@ -1,4 +1,5 @@
 name: Gaetan Jean-Pierre
+resume_pdf: resume.pdf   # path to the compiled PDF — served as a static asset
 title: Software Engineer
 location: San Francisco, CA
 email: gaetanjpcan@gmail.com
