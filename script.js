@@ -202,8 +202,13 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
 // ==================== NAVBAR ====================
 
 const navbar = document.getElementById('navbar');
+const scrollHint = document.querySelector('.hero-scroll-hint');
+
 window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 20);
+    if (scrollHint) {
+        scrollHint.style.opacity = window.scrollY > 40 ? '0' : '1';
+    }
 }, { passive: true });
 
 const hamburger = document.getElementById('hamburger');
