@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(npm install:*)",
+      "Bash(python:*)",
+      "Bash(PYTHONIOENCODING=utf-8 python:*)",
+      "Bash(winget install:*)",
+      "Bash(cmd.exe //c \"where /r C:\\\\ pdflatex.exe\")",
+      "Bash(export PATH=\"/c/Users/Refyl/AppData/Local/Programs/MiKTeX/miktex/bin/x64:$PATH\")"
+    ]
+  }
+}
