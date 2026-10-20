@@ -23,20 +23,20 @@ experience:
     date: Mar 2025 — Present
     current: true
     bullets:
-      - "Architected a high-performance UI component library for the UKG Schedule Generator using a novel heuristic, reducing engine latency by <strong>30 seconds</strong> for enterprise-scale clients."
-      - "Engineered an AI-driven self-scheduling feature enabling employees to automate shift requests via a single-click interface with intelligent historical preference selection."
-      - "Revitalized the employee search interface with optimized filtering logic, significantly reducing search friction in enterprise-scale workforce management modules."
-      - "Implemented a dynamic CSS recalculation engine resolving cross-device display bugs, ensuring <strong>100% visual integrity</strong> across diverse hardware."
+      - "Re-architected result delivery for the Schedule Generator, a core feature used by <strong>10,000+ customers</strong>, moving it to WebSockets with a polling fallback for dropped connections, so schedules return <strong>1.5x faster</strong> than the previous solution."
+      - "Shipped an <strong>LLM-powered</strong>, one-click self-scheduling feature in Angular/TypeScript that drafts each employee's shift requests from their historical preferences, shaping requirements directly with product managers, designers and enterprise customers."
+      - "Rebuilt the filtering logic behind employee search in UKG's workforce management modules, making it faster for users to find the right people across enterprise-scale employee rosters."
+      - "Cut application load times by making the caching layer detect no-op CRUD updates (requests carrying no actual changes) and skip the redundant database writes they triggered."
 
   - company: Onyx Technologies
     role: Software Engineer
     location: Montreal, QC
     date: May 2024 — Feb 2025
     bullets:
-      - "Architected a Machine Learning pipeline to extract and format enterprise data for model training, exposing predictive insights through a scalable RESTful API."
-      - "Engineered a reusable \"Help & Guidance\" framework with context-specific modals and video tutorials, accelerating user onboarding across all custom UI components."
-      - "Designed a personalized recommendation engine to match users with optimal business units using individual preference profiles."
-      - "Enhanced front-end speed by <strong>66%</strong> by designing and customizing Lightning Web Components (LWC) with ES6+ and data-fetching optimization."
+      - "Built a machine learning pipeline that extracts and formats enterprise data for model training, and exposed its predictions through a RESTful API."
+      - "Built a reusable \"Help & Guidance\" framework of context-specific modals and video tutorials, used across all custom UI components to speed up user onboarding."
+      - "Designed a recommendation engine that matches users to their best-fit business units from individual preference profiles."
+      - "Improved front-end speed by <strong>66%</strong> by building and customizing Lightning Web Components (LWC) in ES6+ and optimizing data fetching."
 
   - company: Clinia
     role: Software Developer Intern
@@ -44,69 +44,74 @@ experience:
     date: Jan 2023 — May 2023
     bullets:
       - "Revamped scraping algorithms using C# and ASP.NET, reducing resource consumption by <strong>30%</strong>."
-      - "Developed and maintained multiple ETL pipelines to ensure data workflow stability."
+      - "Developed and maintained multiple ETL pipelines, keeping data workflows stable."
       - "Improved code quality by writing testable code covering critical edge cases with robust exception handling."
 
 projects:
-  - name: Questly
-    icon: "🎮"
+  - name: Fireside
+    icon: "🔥"
     role: Lead Developer
-    date: Jan 2026 — Present
+    date: Oct 2025 — Present
     description: >
-      A gamified daily challenge platform with a suite of interactive logic games.
-      Features a "Playful but Minimal" UI with smooth animations and a synchronized
-      global daily challenge using seeded randomness.
+      A social reading app where readers track books, keep streaks alive through quests and XP,
+      and match with others on overlapping taste. Built end to end, from the Postgres schema to the mobile UI.
+    bullets:
+      - "Designed the Supabase/PostgreSQL backend with row-level security and SECURITY DEFINER RPCs, so match scoring runs server-side without ever exposing strangers' shelves."
+      - "Made XP server-authoritative: a single RPC decides every award, and a partial unique index on dedupe keys makes awards idempotent."
+      - "Built realtime 1:1 chat with a polling fallback, plus a single write path that keeps reading progress, sessions, streaks and XP in sync."
     link: "#"
     github: "#"
     tags:
       - React Native
-      - TypeScript
-      - Puzzle Engine
-      - Procedural Generation
+      - Expo
+      - JavaScript
+      - Supabase
+      - PostgreSQL
 
   - name: FaceScan
     icon: "🧘"
     role: Lead Developer
     date: Nov 2025 — Present
     description: >
-      A cross-platform AI wellness tracking app using facial analysis to generate
-      personalized health insights. Features a serverless backend, real-time dashboards,
-      push notifications, and monetization via RevenueCat.
+      An AI wellness tracking app that turns facial analysis into personalized health insights,
+      with a serverless backend, push notifications and in-app subscriptions.
     link: "https://facescanhealth.com/"
     github: "#"
     tags:
       - React Native
-      - Expo
       - TypeScript
       - Supabase
       - Gemini API
-      - RevenueCat
 
 skills:
   - category: Languages
     items:
-      - JavaScript
       - TypeScript
+      - JavaScript
       - Python
+      - SQL
       - Java
       - C#
       - HTML / CSS
 
   - category: Frameworks & Libraries
     items:
+      - Angular
+      - AngularJS
       - React
       - React Native
-      - AngularJS
-      - ASP.NET
       - Expo
+      - ASP.NET
 
   - category: Tools & Platforms
     items:
-      - Git
+      - PostgreSQL
       - Supabase
-      - Salesforce LWC
+      - WebSockets
       - RESTful APIs
-      - RevenueCat
+      - Git
+      - Salesforce LWC
+      - Claude Code
 
 socials:
   - label: GitHub

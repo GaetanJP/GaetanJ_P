@@ -84,26 +84,26 @@
       {Associate Software Engineer}{Mar 2025 --- Present}
       {UKG --- Montreal, QC}{}
       \resumeItemListStart
-        \resumeItem{Architected a high-performance UI component library for the UKG Schedule Generator using a novel heuristic, reducing engine latency by \textbf{30 seconds} for enterprise-scale clients.}
-        \resumeItem{Engineered an AI-driven self-scheduling feature enabling employees to automate shift requests via a single-click interface with intelligent historical preference selection.}
-        \resumeItem{Revitalized the employee search interface with optimized filtering logic, significantly reducing search friction in enterprise-scale workforce management modules.}
-        \resumeItem{Implemented a dynamic CSS recalculation engine resolving cross-device display bugs, ensuring \textbf{100\% visual integrity} across diverse hardware.}
+        \resumeItem{Re-architected result delivery for the Schedule Generator, a core feature used by \textbf{10,000+ customers}, moving it to WebSockets with a polling fallback for dropped connections, so schedules return \textbf{1.5x faster} than the previous solution.}
+        \resumeItem{Shipped an \textbf{LLM-powered}, one-click self-scheduling feature in Angular/TypeScript that drafts each employee's shift requests from their historical preferences, shaping requirements directly with product managers, designers and enterprise customers.}
+        \resumeItem{Rebuilt the filtering logic behind employee search in UKG's workforce management modules, making it faster for users to find the right people across enterprise-scale employee rosters.}
+        \resumeItem{Cut application load times by making the caching layer detect no-op CRUD updates (requests carrying no actual changes) and skip the redundant database writes they triggered.}
       \resumeItemListEnd
     \resumeSubheading
       {Software Engineer}{May 2024 --- Feb 2025}
       {Onyx Technologies --- Montreal, QC}{}
       \resumeItemListStart
-        \resumeItem{Architected a Machine Learning pipeline to extract and format enterprise data for model training, exposing predictive insights through a scalable RESTful API.}
-        \resumeItem{Engineered a reusable "Help \& Guidance" framework with context-specific modals and video tutorials, accelerating user onboarding across all custom UI components.}
-        \resumeItem{Designed a personalized recommendation engine to match users with optimal business units using individual preference profiles.}
-        \resumeItem{Enhanced front-end speed by \textbf{66\%} by designing and customizing Lightning Web Components (LWC) with ES6+ and data-fetching optimization.}
+        \resumeItem{Built a machine learning pipeline that extracts and formats enterprise data for model training, and exposed its predictions through a RESTful API.}
+        \resumeItem{Built a reusable "Help \& Guidance" framework of context-specific modals and video tutorials, used across all custom UI components to speed up user onboarding.}
+        \resumeItem{Designed a recommendation engine that matches users to their best-fit business units from individual preference profiles.}
+        \resumeItem{Improved front-end speed by \textbf{66\%} by building and customizing Lightning Web Components (LWC) in ES6+ and optimizing data fetching.}
       \resumeItemListEnd
     \resumeSubheading
       {Software Developer Intern}{Jan 2023 --- May 2023}
       {Clinia --- Montreal, QC}{}
       \resumeItemListStart
         \resumeItem{Revamped scraping algorithms using C\# and ASP.NET, reducing resource consumption by \textbf{30\%}.}
-        \resumeItem{Developed and maintained multiple ETL pipelines to ensure data workflow stability.}
+        \resumeItem{Developed and maintained multiple ETL pipelines, keeping data workflows stable.}
         \resumeItem{Improved code quality by writing testable code covering critical edge cases with robust exception handling.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
@@ -112,15 +112,18 @@
 \section{Projects \& Outside Experience}
   \resumeSubHeadingListStart
     \resumeProjectHeading
-      {\textbf{Questly} $|$ \emph{\small{React Native, TypeScript, Puzzle Engine, Procedural Generation}}}{Jan 2026 --- Present $\cdot$ Lead Developer}
+      {\textbf{Fireside} $|$ \emph{\small{React Native, Expo, JavaScript, Supabase, PostgreSQL}}}{Oct 2025 --- Present $\cdot$ Lead Developer}
       \resumeItemListStart
-        \resumeItem{A gamified daily challenge platform with a suite of interactive logic games. Features a "Playful but Minimal" UI with smooth animations and a synchronized global daily challenge using seeded randomness.
+        \resumeItem{A social reading app where readers track books, keep streaks alive through quests and XP, and match with others on overlapping taste. Built end to end, from the Postgres schema to the mobile UI.
 }
+        \resumeItem{Designed the Supabase/PostgreSQL backend with row-level security and SECURITY DEFINER RPCs, so match scoring runs server-side without ever exposing strangers' shelves.}
+        \resumeItem{Made XP server-authoritative: a single RPC decides every award, and a partial unique index on dedupe keys makes awards idempotent.}
+        \resumeItem{Built realtime 1:1 chat with a polling fallback, plus a single write path that keeps reading progress, sessions, streaks and XP in sync.}
       \resumeItemListEnd
     \resumeProjectHeading
-      {\textbf{\href{https://facescanhealth.com/}{\underline{FaceScan}}} $|$ \emph{\small{React Native, Expo, TypeScript, Supabase, Gemini API, RevenueCat}}}{Nov 2025 --- Present $\cdot$ Lead Developer}
+      {\textbf{\href{https://facescanhealth.com/}{\underline{FaceScan}}} $|$ \emph{\small{React Native, TypeScript, Supabase, Gemini API}}}{Nov 2025 --- Present $\cdot$ Lead Developer}
       \resumeItemListStart
-        \resumeItem{A cross-platform AI wellness tracking app using facial analysis to generate personalized health insights. Features a serverless backend, real-time dashboards, push notifications, and monetization via RevenueCat.
+        \resumeItem{An AI wellness tracking app that turns facial analysis into personalized health insights, with a serverless backend, push notifications and in-app subscriptions.
 }
       \resumeItemListEnd
   \resumeSubHeadingListEnd
@@ -129,9 +132,9 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small\item{
-     \textbf{Languages}: JavaScript, TypeScript, Python, Java, C\#, HTML / CSS \\
-     \textbf{Frameworks \& Libraries}: React, React Native, AngularJS, ASP.NET, Expo \\
-     \textbf{Tools \& Platforms}: Git, Supabase, Salesforce LWC, RESTful APIs, RevenueCat \\
+     \textbf{Languages}: TypeScript, JavaScript, Python, SQL, Java, C\#, HTML / CSS \\
+     \textbf{Frameworks \& Libraries}: Angular, AngularJS, React, React Native, Expo, ASP.NET \\
+     \textbf{Tools \& Platforms}: PostgreSQL, Supabase, WebSockets, RESTful APIs, Git, Salesforce LWC, Claude Code \\
     }
  \end{itemize}
 

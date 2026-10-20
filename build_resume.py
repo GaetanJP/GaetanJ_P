@@ -157,6 +157,8 @@ def render_projects(projects: list) -> str:
         role   = tex(p.get("role",  ""))
         date   = tex(p.get("date",  ""))
         desc   = tex(p.get("description", ""))
+        bullets = [desc] + [tex(b) for b in p.get("bullets", [])]
+        bullet_lines = "\n".join(rf"        \resumeItem{{{b}}}" for b in bullets)
         tags   = ", ".join(p.get("tags", []))
         link   = p.get("link",   "")
         github = p.get("github", "")
@@ -171,7 +173,7 @@ def render_projects(projects: list) -> str:
     \resumeProjectHeading
       {{\textbf{{{name_part}}} $|$ \emph{{\small{{{tex(tags)}}}}}}}{{{date} $\cdot$ {role}}}
       \resumeItemListStart
-        \resumeItem{{{desc}}}
+{bullet_lines}
       \resumeItemListEnd""")
 
     return r"""
